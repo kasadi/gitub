@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jakub Dąbrowski</title>
+    <script>
+        var pass = [];
+        var i = 0;
+        document.addEventListener('keydown', KeyPressed)
+        function KeyPressed(event){
+            pass.splice(i, 0, event.key);
+            i++;
+            if (pass.join() == "t,i,k,t,o,k"){
+                window.open("/pages/yourideas.html")
+            }else if (event.key == "r"){
+                i = 0;
+                pass = [];
+                console.log('xd')
+            }
+        }
+    </script>
 </head>
 <body>
     <a href="pages/yourideas.html">Dodaje Wasze Pomysły</a><br>
